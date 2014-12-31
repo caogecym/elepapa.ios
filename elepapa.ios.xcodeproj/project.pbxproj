@@ -14,6 +14,9 @@
 		1BB3E04F1A26CE46009463C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB3E04E1A26CE46009463C9 /* Images.xcassets */; };
 		1BB3E0521A26CE46009463C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB3E0501A26CE46009463C9 /* LaunchScreen.xib */; };
 		1BB3E05E1A26CE47009463C9 /* elepapa_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB3E05D1A26CE47009463C9 /* elepapa_iosTests.swift */; };
+		1BB3E06A1A26CFD0009463C9 /* PapaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB3E0691A26CFD0009463C9 /* PapaModel.swift */; };
+		1BD0AA1B1A27A8FF008B2288 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD0AA1A1A27A8FF008B2288 /* SwiftyJSON.swift */; };
+		1BD0AA1F1A27ACDE008B2288 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD0AA1E1A27ACDE008B2288 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		1BB3E0571A26CE47009463C9 /* elepapa.iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = elepapa.iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB3E05C1A26CE47009463C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BB3E05D1A26CE47009463C9 /* elepapa_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elepapa_iosTests.swift; sourceTree = "<group>"; };
+		1BB3E0691A26CFD0009463C9 /* PapaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapaModel.swift; sourceTree = "<group>"; };
+		1BD0AA1A1A27A8FF008B2288 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		1BD0AA1E1A27ACDE008B2288 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +85,11 @@
 		1BB3E0421A26CE46009463C9 /* elepapa.ios */ = {
 			isa = PBXGroup;
 			children = (
+				5F8761C31A53A8A000CD19A4 /* public */,
+				1BD0AA1A1A27A8FF008B2288 /* SwiftyJSON.swift */,
 				1BB3E0451A26CE46009463C9 /* AppDelegate.swift */,
+				1BB3E0691A26CFD0009463C9 /* PapaModel.swift */,
+				1BD0AA1E1A27ACDE008B2288 /* DataManager.swift */,
 				1BB3E0471A26CE46009463C9 /* MasterViewController.swift */,
 				1BB3E0491A26CE46009463C9 /* DetailViewController.swift */,
 				1BB3E04B1A26CE46009463C9 /* Main.storyboard */,
@@ -113,6 +123,13 @@
 				1BB3E05C1A26CE47009463C9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F8761C31A53A8A000CD19A4 /* public */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +233,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BB3E04A1A26CE46009463C9 /* DetailViewController.swift in Sources */,
+				1BD0AA1F1A27ACDE008B2288 /* DataManager.swift in Sources */,
+				1BB3E06A1A26CFD0009463C9 /* PapaModel.swift in Sources */,
 				1BB3E0481A26CE46009463C9 /* MasterViewController.swift in Sources */,
+				1BD0AA1B1A27A8FF008B2288 /* SwiftyJSON.swift in Sources */,
 				1BB3E0461A26CE46009463C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +363,7 @@
 				INFOPLIST_FILE = elepapa.ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,6 +374,7 @@
 				INFOPLIST_FILE = elepapa.ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -409,6 +431,7 @@
 				1BB3E0631A26CE47009463C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BB3E0641A26CE47009463C9 /* Build configuration list for PBXNativeTarget "elepapa.iosTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +440,7 @@
 				1BB3E0661A26CE47009463C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
