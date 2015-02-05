@@ -16,6 +16,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        return true
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL,
+                     sourceApplication: String?, annotation: AnyObject?) -> Bool {
+                        
+        // parse papa id from url
+        if let urlStr = url.absoluteString? {
+            let urlArr = split(urlStr) {$0 == "/"}
+            let proto: String = urlArr[0]
+            let path: String? = urlArr.count > 1 ? urlArr[1] : nil
+            if let papaId = path?.toInt() {
+                var papa = PapaModel(id: papaId, title: "", imageURL: nil)
+                self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+                var dvc = DetailViewController()
+                dvc.detailItem = papa
+                dvc.papaDetailView = UIWebView(frame: UIScreen.mainScreen().bounds)
+                dvc.view.addSubview(dvc.papaDetailView)
+                
+                self.window!.rootViewController = dvc
+                self.window!.makeKeyAndVisible()
+            }
+            else {
+                println("parse url failed")
+            }
+        }
+        else {
+            println("parse url failed")
+        }
         return true
     }
 

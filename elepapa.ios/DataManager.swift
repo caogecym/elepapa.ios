@@ -13,19 +13,6 @@ let ElepapaURL = "http://elepapa.com/latest.json"
 
 class DataManager {
     
-  class func getTopAppsDataFromFileWithSuccess(success: ((data: NSData) -> Void)) {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-      let filePath = NSBundle.mainBundle().pathForResource("TopApps",ofType:"json")
-   
-      var readError:NSError?
-      if let data = NSData(contentsOfFile:filePath!,
-        options: NSDataReadingOptions.DataReadingUncached,
-        error:&readError) {
-        success(data: data)
-      }
-    })
-  }
-    
   class func getLatestPapaDataFromElepapaWithSuccess(success: ((papaData: NSData!) -> Void)) {
       loadDataFromURL(NSURL(string: ElepapaURL)!, completion:{(data, error) -> Void in
           if let urlData = data {
