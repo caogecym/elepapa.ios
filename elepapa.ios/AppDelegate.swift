@@ -8,6 +8,32 @@
 
 import UIKit
 
+func getPapaIdFromUrl(url: NSURL) -> Int {
+    if let urlStr = url.absoluteString? {
+        let urlArr = split(urlStr) {$0 == "/"}
+        let proto: String = urlArr[0]
+        let path: String? = urlArr.count > 1 ? urlArr[1] : nil
+        if let papaId = path?.toInt() {
+            return papaId
+        }
+    }
+    return -1
+}
+
+func createPapaViewController(papaId: Int) -> DetailViewController? {
+    if (papaId == -1) {
+        println("no valid papa id detected")
+        return nil
+    }
+    
+    let papa = PapaModel(id: papaId, title: "", imageURL: nil)
+    var pvc = DetailViewController()
+    pvc.detailItem = papa
+    pvc.papaDetailView = UIWebView(frame: UIScreen.mainScreen().bounds)
+    pvc.view.addSubview(pvc.papaDetailView)
+    return pvc
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,31 +46,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func displayPapa(pvc: DetailViewController) {
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window!.rootViewController = pvc
+        self.window!.makeKeyAndVisible()
+    }
+    
     func application(application: UIApplication, openURL url: NSURL,
                      sourceApplication: String?, annotation: AnyObject?) -> Bool {
                         
-        // parse papa id from url
-        if let urlStr = url.absoluteString? {
-            let urlArr = split(urlStr) {$0 == "/"}
-            let proto: String = urlArr[0]
-            let path: String? = urlArr.count > 1 ? urlArr[1] : nil
-            if let papaId = path?.toInt() {
-                var papa = PapaModel(id: papaId, title: "", imageURL: nil)
-                self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-                var dvc = DetailViewController()
-                dvc.detailItem = papa
-                dvc.papaDetailView = UIWebView(frame: UIScreen.mainScreen().bounds)
-                dvc.view.addSubview(dvc.papaDetailView)
-                
-                self.window!.rootViewController = dvc
-                self.window!.makeKeyAndVisible()
-            }
-            else {
-                println("parse url failed")
-            }
-        }
-        else {
-            println("parse url failed")
+        let papaId = getPapaIdFromUrl(url)
+        if let pvc = createPapaViewController(papaId) {
+            displayPapa(pvc)
         }
         return true
     }

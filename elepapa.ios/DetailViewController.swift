@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class DetailViewController: UIViewController {
 
@@ -24,10 +25,9 @@ class DetailViewController: UIViewController {
         DataManager.getPapaDetailFromElepapaWithSuccess(papaId, success: { (data) -> Void in
             let json = JSON(data: data)
             
-            if let papaArray = json["post_stream"]["posts"].arrayValue {
-                if let detail: PapaModel = self.detailItem {
-                    detail.content = papaArray[0]["cooked"].stringValue
-                }
+            let papaArray = json["post_stream"]["posts"].arrayValue
+            if let detail: PapaModel = self.detailItem {
+                detail.content = papaArray[0]["cooked"].stringValue
             }
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.configureView()

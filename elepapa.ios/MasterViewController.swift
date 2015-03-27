@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class MasterViewController: UITableViewController {
 
@@ -37,20 +38,18 @@ class MasterViewController: UITableViewController {
         DataManager.getLatestPapaDataFromElepapaWithSuccess { (data) -> Void in
             let json = JSON(data: data)
             
-
-            if let papaArray = json["topic_list"]["topics"].arrayValue {
-                for papaDict in papaArray {
-                    var papaId: Int? = papaDict["id"].integerValue
-                    var papaTitle: String? = papaDict["title"].stringValue
-                    var papaImgUrl: String? = papaDict["image_url"].stringValue
-                    var papa = PapaModel(id: papaId!, title: papaTitle!, imageURL: papaImgUrl)
-                    self.objects.append(papa)
-                }
-                
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.insertLatestPapas()
-                })
+            let papaArray = json["topic_list"]["topics"].arrayValue
+            for papaDict in papaArray {
+                var papaId: Int? = papaDict["id"].intValue
+                var papaTitle: String? = papaDict["title"].stringValue
+                var papaImgUrl: String? = papaDict["image_url"].stringValue
+                var papa = PapaModel(id: papaId!, title: papaTitle!, imageURL: papaImgUrl)
+                self.objects.append(papa)
             }
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.insertLatestPapas()
+            })
         }
     }
     

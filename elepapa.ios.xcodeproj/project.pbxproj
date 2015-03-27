@@ -15,8 +15,14 @@
 		1BB3E0521A26CE46009463C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB3E0501A26CE46009463C9 /* LaunchScreen.xib */; };
 		1BB3E05E1A26CE47009463C9 /* elepapa_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB3E05D1A26CE47009463C9 /* elepapa_iosTests.swift */; };
 		1BB3E06A1A26CFD0009463C9 /* PapaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB3E0691A26CFD0009463C9 /* PapaModel.swift */; };
-		1BD0AA1B1A27A8FF008B2288 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD0AA1A1A27A8FF008B2288 /* SwiftyJSON.swift */; };
 		1BD0AA1F1A27ACDE008B2288 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD0AA1E1A27ACDE008B2288 /* DataManager.swift */; };
+		33BB8B5D98B5DC2B791269B6 /* Pods_elepapa_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921D60B377984C4CB4F0D82 /* Pods_elepapa_ios.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5F15F3371AC517C30027F339 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB3E0451A26CE46009463C9 /* AppDelegate.swift */; };
+		5F15F3391AC51BD50027F339 /* PapaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB3E0691A26CFD0009463C9 /* PapaModel.swift */; };
+		5F15F33A1AC51BDA0027F339 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD0AA1E1A27ACDE008B2288 /* DataManager.swift */; };
+		5F15F33B1AC51BDE0027F339 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB3E0471A26CE46009463C9 /* MasterViewController.swift */; };
+		5F15F33C1AC51BE10027F339 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB3E0491A26CE46009463C9 /* DetailViewController.swift */; };
+		91E7907A63A0C6D887B804DA /* Pods_elepapa_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8904BB8A7DAC0E6D77982D6 /* Pods_elepapa_iosTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12F702968DDD91764B301EC6 /* Pods-elepapa.ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elepapa.ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-elepapa.ios/Pods-elepapa.ios.release.xcconfig"; sourceTree = "<group>"; };
 		1BB3E0401A26CE46009463C9 /* elepapa.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elepapa.ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB3E0441A26CE46009463C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BB3E0451A26CE46009463C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +49,12 @@
 		1BB3E05C1A26CE47009463C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BB3E05D1A26CE47009463C9 /* elepapa_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elepapa_iosTests.swift; sourceTree = "<group>"; };
 		1BB3E0691A26CFD0009463C9 /* PapaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapaModel.swift; sourceTree = "<group>"; };
-		1BD0AA1A1A27A8FF008B2288 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		1BD0AA1E1A27ACDE008B2288 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2B22AE5BA9244D2FB32166F2 /* Pods-elepapa.iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elepapa.iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-elepapa.iosTests/Pods-elepapa.iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		5921D60B377984C4CB4F0D82 /* Pods_elepapa_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elepapa_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7452F432C0D5E35CE4C5EA72 /* Pods-elepapa.iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elepapa.iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elepapa.iosTests/Pods-elepapa.iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B26CC95E3722BAE897808131 /* Pods-elepapa.ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elepapa.ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elepapa.ios/Pods-elepapa.ios.debug.xcconfig"; sourceTree = "<group>"; };
+		D8904BB8A7DAC0E6D77982D6 /* Pods_elepapa_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elepapa_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33BB8B5D98B5DC2B791269B6 /* Pods_elepapa_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E7907A63A0C6D887B804DA /* Pods_elepapa_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +83,8 @@
 				1BB3E0421A26CE46009463C9 /* elepapa.ios */,
 				1BB3E05A1A26CE47009463C9 /* elepapa.iosTests */,
 				1BB3E0411A26CE46009463C9 /* Products */,
+				4E889FF657AFF33442D0036E /* Pods */,
+				8DC616AAFB2DD3287AAA0067 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				5F8761C31A53A8A000CD19A4 /* public */,
-				1BD0AA1A1A27A8FF008B2288 /* SwiftyJSON.swift */,
 				1BB3E0451A26CE46009463C9 /* AppDelegate.swift */,
 				1BB3E0691A26CFD0009463C9 /* PapaModel.swift */,
 				1BD0AA1E1A27ACDE008B2288 /* DataManager.swift */,
@@ -125,11 +139,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4E889FF657AFF33442D0036E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B26CC95E3722BAE897808131 /* Pods-elepapa.ios.debug.xcconfig */,
+				12F702968DDD91764B301EC6 /* Pods-elepapa.ios.release.xcconfig */,
+				7452F432C0D5E35CE4C5EA72 /* Pods-elepapa.iosTests.debug.xcconfig */,
+				2B22AE5BA9244D2FB32166F2 /* Pods-elepapa.iosTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5F8761C31A53A8A000CD19A4 /* public */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = public;
+			sourceTree = "<group>";
+		};
+		8DC616AAFB2DD3287AAA0067 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5921D60B377984C4CB4F0D82 /* Pods_elepapa_ios.framework */,
+				D8904BB8A7DAC0E6D77982D6 /* Pods_elepapa_iosTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BB3E0611A26CE47009463C9 /* Build configuration list for PBXNativeTarget "elepapa.ios" */;
 			buildPhases = (
+				A273CF723042D5BF39989378 /* Check Pods Manifest.lock */,
 				1BB3E03C1A26CE46009463C9 /* Sources */,
 				1BB3E03D1A26CE46009463C9 /* Frameworks */,
 				1BB3E03E1A26CE46009463C9 /* Resources */,
+				7830E85F1F7C6822DBACF45B /* Embed Pods Frameworks */,
+				4BC3527FB187B0188F7BFB77 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BB3E0641A26CE47009463C9 /* Build configuration list for PBXNativeTarget "elepapa.iosTests" */;
 			buildPhases = (
+				1AE9DFDA4AFAA23FA78AD6CA /* Check Pods Manifest.lock */,
 				1BB3E0531A26CE47009463C9 /* Sources */,
 				1BB3E0541A26CE47009463C9 /* Frameworks */,
 				1BB3E0551A26CE47009463C9 /* Resources */,
+				96C1BE05560D1BCEFF114666 /* Embed Pods Frameworks */,
+				7DB166F64D25C260C9E25035 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,6 +267,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AE9DFDA4AFAA23FA78AD6CA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4BC3527FB187B0188F7BFB77 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elepapa.ios/Pods-elepapa.ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7830E85F1F7C6822DBACF45B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elepapa.ios/Pods-elepapa.ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DB166F64D25C260C9E25035 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elepapa.iosTests/Pods-elepapa.iosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96C1BE05560D1BCEFF114666 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elepapa.iosTests/Pods-elepapa.iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A273CF723042D5BF39989378 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1BB3E03C1A26CE46009463C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -236,7 +369,6 @@
 				1BD0AA1F1A27ACDE008B2288 /* DataManager.swift in Sources */,
 				1BB3E06A1A26CFD0009463C9 /* PapaModel.swift in Sources */,
 				1BB3E0481A26CE46009463C9 /* MasterViewController.swift in Sources */,
-				1BD0AA1B1A27A8FF008B2288 /* SwiftyJSON.swift in Sources */,
 				1BB3E0461A26CE46009463C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,7 +377,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F15F33B1AC51BDE0027F339 /* MasterViewController.swift in Sources */,
+				5F15F3371AC517C30027F339 /* AppDelegate.swift in Sources */,
+				5F15F33A1AC51BDA0027F339 /* DataManager.swift in Sources */,
+				5F15F33C1AC51BE10027F339 /* DetailViewController.swift in Sources */,
 				1BB3E05E1A26CE47009463C9 /* elepapa_iosTests.swift in Sources */,
+				5F15F3391AC51BD50027F339 /* PapaModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +495,7 @@
 		};
 		1BB3E0621A26CE47009463C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B26CC95E3722BAE897808131 /* Pods-elepapa.ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = elepapa.ios/Info.plist;
@@ -369,6 +507,7 @@
 		};
 		1BB3E0631A26CE47009463C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12F702968DDD91764B301EC6 /* Pods-elepapa.ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = elepapa.ios/Info.plist;
@@ -380,6 +519,7 @@
 		};
 		1BB3E0651A26CE47009463C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7452F432C0D5E35CE4C5EA72 /* Pods-elepapa.iosTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -399,6 +539,7 @@
 		};
 		1BB3E0661A26CE47009463C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B22AE5BA9244D2FB32166F2 /* Pods-elepapa.iosTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

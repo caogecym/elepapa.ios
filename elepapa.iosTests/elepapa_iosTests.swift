@@ -21,9 +21,9 @@ class elepapa_iosTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testParsesPapaId() {
+        XCTAssertEqual(getPapaIdFromUrl(NSURL(string: "elepapa://11")!), 11)
+        XCTAssertEqual(getPapaIdFromUrl(NSURL(string: "elepapa://noId")!), -1)
     }
     
     func testPerformanceExample() {
