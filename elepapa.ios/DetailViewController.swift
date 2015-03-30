@@ -56,10 +56,63 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // get rid of 64px UIWebView top padding
+        self.automaticallyAdjustsScrollViewInsets = false
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: UIBarButtonSystemItem.Action,
+            target:self,
+            action: "rightBtnSelected"
+        )
+        
+        //self.setupGestureRecognizer()
+
         if let detail: PapaModel = self.detailItem {
             getPapaDetail(detail.id)
         }
+    }
+    
+    func setupGestureRecognizer() {
+        let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "swipeLeft:")
+        recognizer.direction = .Left
+        self.view.addGestureRecognizer(recognizer)
+    }
+    
+    func swipeLeft(recognizer : UISwipeGestureRecognizer) {
+        //self.performSegueWithIdentifier("MySegue", sender: self)
+        println("TODO: swipe left handler here")
+    }
+
+    
+    func initAlertController() -> UIAlertController {
+        var alert = UIAlertController(
+            title: nil,
+            message: nil,
+            preferredStyle: UIAlertControllerStyle.ActionSheet
+        )
+        
+        let shareWithWeChatFriendAction = UIAlertAction(
+            title: "Share with WeChat friend",
+            style: UIAlertActionStyle.Default,
+            handler: { (action: UIAlertAction!) -> Void in
+                println("TODO: handler logic here")
+            }            
+        )             
+        
+        let cancelAction = UIAlertAction(
+            title: "Cancel",
+            style: UIAlertActionStyle.Cancel,
+            handler: nil
+        )
+        
+        alert.addAction(shareWithWeChatFriendAction);
+        alert.addAction(cancelAction);
+        return alert
+    }
+    
+    func rightBtnSelected() {
+        self.presentViewController(self.initAlertController(), animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
