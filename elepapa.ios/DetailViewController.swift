@@ -49,7 +49,7 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail: PapaModel = self.detailItem {
             if let content = self.papaDetailView {
-                content.loadHTMLString(self.generateHtml(detail), baseURL: nil)
+                content.loadHTMLString(self.generateHtml(detail), baseURL: NSURL(string:"https://"))
             }
         }
     }
