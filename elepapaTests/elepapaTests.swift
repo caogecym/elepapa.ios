@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+import elepapa
 
 class elepapaTests: XCTestCase {
     
@@ -22,8 +23,8 @@ class elepapaTests: XCTestCase {
     }
     
     func testParsesPapaId() {
-        //XCTAssertEqual(getPapaIdFromUrl(NSURL(string: "elepapa://11")!), 11)
-        //XCTAssertEqual(getPapaIdFromUrl(NSURL(string: "elepapa://noId")!), -1)
+        XCTAssertEqual(getPapaIdFromUrl(NSURL(string: "elepapa://11")!), 11)
+        XCTAssertEqual(getPapaIdFromUrl(NSURL(string: "elepapa://noId")!), -1)
     }
     
     func testPerformanceExample() {

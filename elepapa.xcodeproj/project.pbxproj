@@ -97,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				5F4864EE1ACC7BFA0074945E /* SwiftyJSON.swift */,
+				5FEA5BA21ACC72390004A862 /* bridge.h */,
 				5FEA5B9E1ACC721B0004A862 /* libWeChatSDK.a */,
 				5FEA5B9F1ACC721B0004A862 /* WXApi.h */,
 				5FEA5BA01ACC721B0004A862 /* WXApiObject.h */,
@@ -109,7 +110,6 @@
 				5FEA5B851ACC72030004A862 /* Images.xcassets */,
 				5FEA5B871ACC72030004A862 /* LaunchScreen.xib */,
 				5FEA5B7A1ACC72030004A862 /* Supporting Files */,
-				5FEA5BA21ACC72390004A862 /* bridge.h */,
 			);
 			path = elepapa;
 			sourceTree = "<group>";
@@ -407,6 +407,7 @@
 				INFOPLIST_FILE = elepapaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/elepapa.app/elepapa";
 			};
 			name = Debug;
@@ -422,6 +423,7 @@
 				INFOPLIST_FILE = elepapaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/elepapa.app/elepapa";
 			};
 			name = Release;

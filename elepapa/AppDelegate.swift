@@ -8,7 +8,7 @@
 
 import UIKit
 
-func getPapaIdFromUrl(url: NSURL) -> Int {
+public func getPapaIdFromUrl(url: NSURL) -> Int {
     if let urlStr = url.absoluteString? {
         let urlArr = split(urlStr) {$0 == "/"}
         let proto: String = urlArr[0]
