@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FEA5B7D1ACC72030004A862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B7C1ACC72030004A862 /* AppDelegate.swift */; };
+		5FEA5B7F1ACC72030004A862 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B7E1ACC72030004A862 /* MasterViewController.swift */; };
+		5FEA5B811ACC72030004A862 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B801ACC72030004A862 /* DetailViewController.swift */; };
+		5FEA5B841ACC72030004A862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA5B821ACC72030004A862 /* Main.storyboard */; };
+		5FEA5B861ACC72030004A862 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA5B851ACC72030004A862 /* Images.xcassets */; };
+		5FEA5B891ACC72030004A862 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA5B871ACC72030004A862 /* LaunchScreen.xib */; };
+		5FEA5B951ACC72030004A862 /* elepapaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B941ACC72030004A862 /* elepapaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5FEA5B8F1ACC72030004A862 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FEA5B6F1ACC72030004A862 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FEA5B761ACC72030004A862;
+			remoteInfo = elepapa;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5FEA5B771ACC72030004A862 /* elepapa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elepapa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FEA5B7B1ACC72030004A862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FEA5B7C1ACC72030004A862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5FEA5B7E1ACC72030004A862 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		5FEA5B801ACC72030004A862 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5FEA5B831ACC72030004A862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FEA5B851ACC72030004A862 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5FEA5B881ACC72030004A862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5FEA5B8E1ACC72030004A862 /* elepapaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = elepapaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FEA5B931ACC72030004A862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FEA5B941ACC72030004A862 /* elepapaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elepapaTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FEA5B741ACC72030004A862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FEA5B8B1ACC72030004A862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FEA5B6E1ACC72030004A862 = {
+			isa = PBXGroup;
+			children = (
+				5FEA5B791ACC72030004A862 /* elepapa */,
+				5FEA5B911ACC72030004A862 /* elepapaTests */,
+				5FEA5B781ACC72030004A862 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5FEA5B781ACC72030004A862 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FEA5B771ACC72030004A862 /* elepapa.app */,
+				5FEA5B8E1ACC72030004A862 /* elepapaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FEA5B791ACC72030004A862 /* elepapa */ = {
+			isa = PBXGroup;
+			children = (
+				5FEA5B7C1ACC72030004A862 /* AppDelegate.swift */,
+				5FEA5B7E1ACC72030004A862 /* MasterViewController.swift */,
+				5FEA5B801ACC72030004A862 /* DetailViewController.swift */,
+				5FEA5B821ACC72030004A862 /* Main.storyboard */,
+				5FEA5B851ACC72030004A862 /* Images.xcassets */,
+				5FEA5B871ACC72030004A862 /* LaunchScreen.xib */,
+				5FEA5B7A1ACC72030004A862 /* Supporting Files */,
+			);
+			path = elepapa;
+			sourceTree = "<group>";
+		};
+		5FEA5B7A1ACC72030004A862 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FEA5B7B1ACC72030004A862 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FEA5B911ACC72030004A862 /* elepapaTests */ = {
+			isa = PBXGroup;
+			children = (
+				5FEA5B941ACC72030004A862 /* elepapaTests.swift */,
+				5FEA5B921ACC72030004A862 /* Supporting Files */,
+			);
+			path = elepapaTests;
+			sourceTree = "<group>";
+		};
+		5FEA5B921ACC72030004A862 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FEA5B931ACC72030004A862 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FEA5B761ACC72030004A862 /* elepapa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FEA5B981ACC72030004A862 /* Build configuration list for PBXNativeTarget "elepapa" */;
+			buildPhases = (
+				5FEA5B731ACC72030004A862 /* Sources */,
+				5FEA5B741ACC72030004A862 /* Frameworks */,
+				5FEA5B751ACC72030004A862 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = elepapa;
+			productName = elepapa;
+			productReference = 5FEA5B771ACC72030004A862 /* elepapa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FEA5B8D1ACC72030004A862 /* elepapaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FEA5B9B1ACC72030004A862 /* Build configuration list for PBXNativeTarget "elepapaTests" */;
+			buildPhases = (
+				5FEA5B8A1ACC72030004A862 /* Sources */,
+				5FEA5B8B1ACC72030004A862 /* Frameworks */,
+				5FEA5B8C1ACC72030004A862 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FEA5B901ACC72030004A862 /* PBXTargetDependency */,
+			);
+			name = elepapaTests;
+			productName = elepapaTests;
+			productReference = 5FEA5B8E1ACC72030004A862 /* elepapaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FEA5B6F1ACC72030004A862 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Yuming;
+				TargetAttributes = {
+					5FEA5B761ACC72030004A862 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					5FEA5B8D1ACC72030004A862 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 5FEA5B761ACC72030004A862;
+					};
+				};
+			};
+			buildConfigurationList = 5FEA5B721ACC72030004A862 /* Build configuration list for PBXProject "elepapa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5FEA5B6E1ACC72030004A862;
+			productRefGroup = 5FEA5B781ACC72030004A862 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FEA5B761ACC72030004A862 /* elepapa */,
+				5FEA5B8D1ACC72030004A862 /* elepapaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FEA5B751ACC72030004A862 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FEA5B841ACC72030004A862 /* Main.storyboard in Resources */,
+				5FEA5B891ACC72030004A862 /* LaunchScreen.xib in Resources */,
+				5FEA5B861ACC72030004A862 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FEA5B8C1ACC72030004A862 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FEA5B731ACC72030004A862 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FEA5B811ACC72030004A862 /* DetailViewController.swift in Sources */,
+				5FEA5B7F1ACC72030004A862 /* MasterViewController.swift in Sources */,
+				5FEA5B7D1ACC72030004A862 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FEA5B8A1ACC72030004A862 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FEA5B951ACC72030004A862 /* elepapaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FEA5B901ACC72030004A862 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FEA5B761ACC72030004A862 /* elepapa */;
+			targetProxy = 5FEA5B8F1ACC72030004A862 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5FEA5B821ACC72030004A862 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FEA5B831ACC72030004A862 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5FEA5B871ACC72030004A862 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FEA5B881ACC72030004A862 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FEA5B961ACC72030004A862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5FEA5B971ACC72030004A862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FEA5B991ACC72030004A862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = elepapa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5FEA5B9A1ACC72030004A862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = elepapa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5FEA5B9C1ACC72030004A862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = elepapaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/elepapa.app/elepapa";
+			};
+			name = Debug;
+		};
+		5FEA5B9D1ACC72030004A862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = elepapaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/elepapa.app/elepapa";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FEA5B721ACC72030004A862 /* Build configuration list for PBXProject "elepapa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FEA5B961ACC72030004A862 /* Debug */,
+				5FEA5B971ACC72030004A862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FEA5B981ACC72030004A862 /* Build configuration list for PBXNativeTarget "elepapa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FEA5B991ACC72030004A862 /* Debug */,
+				5FEA5B9A1ACC72030004A862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5FEA5B9B1ACC72030004A862 /* Build configuration list for PBXNativeTarget "elepapaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FEA5B9C1ACC72030004A862 /* Debug */,
+				5FEA5B9D1ACC72030004A862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FEA5B6F1ACC72030004A862 /* Project object */;
+}
