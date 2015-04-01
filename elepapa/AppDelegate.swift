@@ -1,25 +1,65 @@
 //
 //  AppDelegate.swift
-//  elepapa
+//  elepapa.ios
 //
-//  Created by Yuming on 4/1/15.
-//  Copyright (c) 2015 Yuming. All rights reserved.
+//  Created by Yuming Cao on 11/26/14.
+//  Copyright (c) 2014 papa. All rights reserved.
 //
 
 import UIKit
 
+func getPapaIdFromUrl(url: NSURL) -> Int {
+    if let urlStr = url.absoluteString? {
+        let urlArr = split(urlStr) {$0 == "/"}
+        let proto: String = urlArr[0]
+        let path: String? = urlArr.count > 1 ? urlArr[1] : nil
+        if let papaId = path?.toInt() {
+            return papaId
+        }
+    }
+    return -1
+}
+
+func createPapaViewController(papaId: Int) -> DetailViewController? {
+    if (papaId == -1) {
+        println("no valid papa id detected")
+        return nil
+    }
+    
+    let papa = PapaModel(id: papaId, title: "", imageURL: nil)
+    var pvc = DetailViewController()
+    pvc.detailItem = papa
+    pvc.papaDetailView = UIWebView(frame: UIScreen.mainScreen().bounds)
+    pvc.view.addSubview(pvc.papaDetailView)
+    return pvc
+}
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let splitViewController = self.window!.rootViewController as UISplitViewController
-        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as UINavigationController
-        navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
-        splitViewController.delegate = self
+        
+        WXApi.registerApp("hehe")
+        return true
+    }
+    
+    func displayPapa(pvc: DetailViewController) {
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window!.rootViewController = pvc
+        self.window!.makeKeyAndVisible()
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL,
+                     sourceApplication: String?, annotation: AnyObject?) -> Bool {
+                        
+        let papaId = getPapaIdFromUrl(url)
+        if let pvc = createPapaViewController(papaId) {
+            displayPapa(pvc)
+        }
         return true
     }
 
@@ -31,6 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -45,19 +86,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    // MARK: - Split view
-
-    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController!, ontoPrimaryViewController primaryViewController:UIViewController!) -> Bool {
-        if let secondaryAsNavController = secondaryViewController as? UINavigationController {
-            if let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController {
-                if topAsDetailController.detailItem == nil {
-                    // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-                    return true
-                }
-            }
-        }
-        return false
-    }
 
 }
 
