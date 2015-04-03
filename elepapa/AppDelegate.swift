@@ -21,6 +21,8 @@ public func getPapaIdFromUrl(url: NSURL) -> Int {
 }
 
 func createPapaViewController(papaId: Int) -> DetailViewController? {
+    // TODO: add navigator
+    // expected behavior: should be able to nav to home page, i.e. nav controller
     if (papaId == -1) {
         println("no valid papa id detected")
         return nil
@@ -43,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        WXApi.registerApp("hehe")
+        WXApi.registerApp("elepapa")
         return true
     }
     
