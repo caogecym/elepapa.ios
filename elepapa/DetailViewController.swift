@@ -1,6 +1,6 @@
 //
 //  DetailViewController.swift
-//  elepapa.ios
+//  elepapa
 //
 //  Created by Yuming Cao on 11/26/14.
 //  Copyright (c) 2014 papa. All rights reserved.
@@ -15,7 +15,6 @@ class DetailViewController: UIViewController {
 
     var detailItem: PapaModel? {
         didSet {
-            // Update the view.
             self.configureView()
         }
     }
@@ -95,7 +94,7 @@ class DetailViewController: UIViewController {
             title: "Share with WeChat friend",
             style: UIAlertActionStyle.Default,
             handler: { (action: UIAlertAction!) -> Void in
-                println("TODO: handler logic here")
+                self.sharePapaToFriend()
             }            
         )             
         
@@ -110,14 +109,28 @@ class DetailViewController: UIViewController {
         return alert
     }
     
-    func shareTextToFriend() {
-        var req = SendMessageToWXReq();
-        req.text = "人文的东西并不是体现在你看得到的方面，它更多的体现在你看不到的那些方面，它会影响每一个功能，这才是最本质的。但是，对这点可能很多人没有思考过，以为人文的东西就是我们搞一个很小清新的图片什么的。”综合来看，人文的东西其实是贯穿整个产品的脉络，或者说是它的灵魂所在。";
-        req.bText = true;
-        //req.scene = _scene;
+    func sharePapaToFriend() {
+        var message = WXMediaMessage()
         
-        WXApi.sendReq(req);
+        if let papa: PapaModel = self.detailItem {
+            message.title = papa.title
+            // message.description = papa.getText()
+            
+            // TODO: fetch papa image or elepapa logo
+            // message.setThumbImage(UIImage(imageNamed: "res2.png"))
+            
+            var webObj = WXWebpageObject()
+            webObj.webpageUrl = "www.elepapa.com/t/\(papa.id)"
+            message.mediaObject = webObj
+            
+            var req  = SendMessageToWXReq()
+            req.bText = false
+            req.message = message
+            
+            WXApi.sendReq(req)
+        }
     }
+
     
     func rightBtnSelected() {
         self.presentViewController(self.initAlertController(), animated: true, completion: nil)

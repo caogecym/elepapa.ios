@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  elepapa.ios
+//  elepapa
 //
 //  Created by Yuming Cao on 11/26/14.
 //  Copyright (c) 2014 papa. All rights reserved.
