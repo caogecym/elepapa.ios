@@ -37,7 +37,7 @@ public class PapaModel: NSObject, Printable {
             )
             
             if let str = attributedString?.string {
-                return str.substringToIndex(advance(str.startIndex, min(25, countElements(str))))
+                return str.substringToIndex(advance(str.startIndex, min(40, countElements(str))))
             }
             else {
                 return ""
