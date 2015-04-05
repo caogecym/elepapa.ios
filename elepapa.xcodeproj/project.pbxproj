@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F193FB31ACC942900A4FEA5 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F193FAF1ACC942900A4FEA5 /* libWeChatSDK.a */; };
-		5F193FBA1ACC94F600A4FEA5 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F193FB91ACC94F600A4FEA5 /* SwiftyJSON.swift */; };
+		550B4AA3517F16479AE27519 /* Pods_elepapa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E3CAB2698E29F08CF2900F /* Pods_elepapa.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5F4864E81ACC7A500074945E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4864E61ACC7A500074945E /* DataManager.swift */; };
 		5F4864E91ACC7A500074945E /* PapaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4864E71ACC7A500074945E /* PapaModel.swift */; };
 		5F4864ED1ACC7B740074945E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F4864EC1ACC7B740074945E /* Main.storyboard */; };
@@ -18,6 +17,8 @@
 		5FEA5B861ACC72030004A862 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA5B851ACC72030004A862 /* Images.xcassets */; };
 		5FEA5B891ACC72030004A862 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA5B871ACC72030004A862 /* LaunchScreen.xib */; };
 		5FEA5B951ACC72030004A862 /* elepapaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B941ACC72030004A862 /* elepapaTests.swift */; };
+		65696F2864961EE421A219E0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6593F7FF18FFDBD62C9900B8 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6B20DE395B9C44AEAE253C41 /* Pods_elepapaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4673083F7189DFEC935DEA /* Pods_elepapaTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,11 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5F193FAC1ACC942900A4FEA5 /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
-		5F193FAF1ACC942900A4FEA5 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		5F193FB01ACC942900A4FEA5 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		5F193FB11ACC942900A4FEA5 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		5F193FB91ACC94F600A4FEA5 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		458F0938F73F8F029E9117BF /* Pods-elepapaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elepapaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-elepapaTests/Pods-elepapaTests.release.xcconfig"; sourceTree = "<group>"; };
 		5F4864E61ACC7A500074945E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5F4864E71ACC7A500074945E /* PapaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapaModel.swift; sourceTree = "<group>"; };
 		5F4864EC1ACC7B740074945E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +46,12 @@
 		5FEA5B8E1ACC72030004A862 /* elepapaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = elepapaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FEA5B931ACC72030004A862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FEA5B941ACC72030004A862 /* elepapaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elepapaTests.swift; sourceTree = "<group>"; };
+		6593F7FF18FFDBD62C9900B8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C1AF08681D83EE17E8E3454 /* Pods-elepapaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elepapaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elepapaTests/Pods-elepapaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B70324782E00C06D3FC24655 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BBAC1DE67A96367EBEC651A5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F0E3CAB2698E29F08CF2900F /* Pods_elepapa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elepapa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD4673083F7189DFEC935DEA /* Pods_elepapaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elepapaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F193FB31ACC942900A4FEA5 /* libWeChatSDK.a in Frameworks */,
+				65696F2864961EE421A219E0 /* Pods.framework in Frameworks */,
+				550B4AA3517F16479AE27519 /* Pods_elepapa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,38 +68,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B20DE395B9C44AEAE253C41 /* Pods_elepapaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5F193FAB1ACC942900A4FEA5 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				5F193FB91ACC94F600A4FEA5 /* SwiftyJSON.swift */,
-				5F193FAC1ACC942900A4FEA5 /* bridge.h */,
-				5F193FAE1ACC942900A4FEA5 /* WeChat */,
-			);
-			path = libs;
-			sourceTree = "<group>";
-		};
-		5F193FAE1ACC942900A4FEA5 /* WeChat */ = {
-			isa = PBXGroup;
-			children = (
-				5F193FAF1ACC942900A4FEA5 /* libWeChatSDK.a */,
-				5F193FB01ACC942900A4FEA5 /* WXApi.h */,
-				5F193FB11ACC942900A4FEA5 /* WXApiObject.h */,
-			);
-			path = WeChat;
-			sourceTree = "<group>";
-		};
 		5FEA5B6E1ACC72030004A862 = {
 			isa = PBXGroup;
 			children = (
 				5FEA5B791ACC72030004A862 /* elepapa */,
 				5FEA5B911ACC72030004A862 /* elepapaTests */,
 				5FEA5B781ACC72030004A862 /* Products */,
+				BB77B7BD2E75762044A447F3 /* Pods */,
+				B6B4103CCF98A5FC252CBA79 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,7 +106,6 @@
 				5F4864EC1ACC7B740074945E /* Main.storyboard */,
 				5FEA5B851ACC72030004A862 /* Images.xcassets */,
 				5FEA5B871ACC72030004A862 /* LaunchScreen.xib */,
-				5F193FAB1ACC942900A4FEA5 /* libs */,
 				5FEA5B7A1ACC72030004A862 /* Supporting Files */,
 			);
 			path = elepapa;
@@ -150,6 +136,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B6B4103CCF98A5FC252CBA79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6593F7FF18FFDBD62C9900B8 /* Pods.framework */,
+				F0E3CAB2698E29F08CF2900F /* Pods_elepapa.framework */,
+				FD4673083F7189DFEC935DEA /* Pods_elepapaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB77B7BD2E75762044A447F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B70324782E00C06D3FC24655 /* Pods.debug.xcconfig */,
+				BBAC1DE67A96367EBEC651A5 /* Pods.release.xcconfig */,
+				7C1AF08681D83EE17E8E3454 /* Pods-elepapaTests.debug.xcconfig */,
+				458F0938F73F8F029E9117BF /* Pods-elepapaTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FEA5B981ACC72030004A862 /* Build configuration list for PBXNativeTarget "elepapa" */;
 			buildPhases = (
+				5AAFE3113446BAD2F035938A /* Check Pods Manifest.lock */,
 				5FEA5B731ACC72030004A862 /* Sources */,
 				5FEA5B741ACC72030004A862 /* Frameworks */,
 				5FEA5B751ACC72030004A862 /* Resources */,
+				0B3B6610A0FFD8AC2A083AB9 /* Embed Pods Frameworks */,
+				1157ED89FBC754658EED84E4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FEA5B9B1ACC72030004A862 /* Build configuration list for PBXNativeTarget "elepapaTests" */;
 			buildPhases = (
+				0590007A1C6FF3D7014D299B /* Check Pods Manifest.lock */,
 				5FEA5B8A1ACC72030004A862 /* Sources */,
 				5FEA5B8B1ACC72030004A862 /* Frameworks */,
 				5FEA5B8C1ACC72030004A862 /* Resources */,
+				01A5D40A1640300EF6C0FE5B /* Embed Pods Frameworks */,
+				96FFA6A3D66B30C98D02C5E5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +259,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01A5D40A1640300EF6C0FE5B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elepapaTests/Pods-elepapaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0590007A1C6FF3D7014D299B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0B3B6610A0FFD8AC2A083AB9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elepapa/Pods-elepapa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1157ED89FBC754658EED84E4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AAFE3113446BAD2F035938A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		96FFA6A3D66B30C98D02C5E5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elepapaTests/Pods-elepapaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5FEA5B731ACC72030004A862 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -254,7 +360,6 @@
 				5FEA5B811ACC72030004A862 /* DetailViewController.swift in Sources */,
 				5F4864E81ACC7A500074945E /* DataManager.swift in Sources */,
 				5FEA5B7F1ACC72030004A862 /* MasterViewController.swift in Sources */,
-				5F193FBA1ACC94F600A4FEA5 /* SwiftyJSON.swift in Sources */,
 				5FEA5B7D1ACC72030004A862 /* AppDelegate.swift in Sources */,
 				5F4864E91ACC7A500074945E /* PapaModel.swift in Sources */,
 			);
@@ -371,6 +476,7 @@
 		};
 		5FEA5B991ACC72030004A862 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B70324782E00C06D3FC24655 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -383,12 +489,12 @@
 					"$(PROJECT_DIR)/elepapa/libs/WeChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = elepapa/libs/bridge.h;
 			};
 			name = Debug;
 		};
 		5FEA5B9A1ACC72030004A862 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBAC1DE67A96367EBEC651A5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -401,12 +507,12 @@
 					"$(PROJECT_DIR)/elepapa/libs/WeChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = elepapa/libs/bridge.h;
 			};
 			name = Release;
 		};
 		5FEA5B9C1ACC72030004A862 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C1AF08681D83EE17E8E3454 /* Pods-elepapaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -427,6 +533,7 @@
 		};
 		5FEA5B9D1ACC72030004A862 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 458F0938F73F8F029E9117BF /* Pods-elepapaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

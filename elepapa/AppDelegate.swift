@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WeChat
 
 public func getPapaIdFromUrl(url: NSURL) -> Int {
     if let urlStr = url.absoluteString? {
