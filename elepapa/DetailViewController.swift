@@ -116,7 +116,7 @@ class DetailViewController: UIViewController {
         
         if let papa: PapaModel = self.detailItem {
             message.title = papa.title
-            // message.description = papa.getText()
+            message.description = papa.getText()
             
             // TODO: fetch papa image or elepapa logo
             // message.setThumbImage(UIImage(imageNamed: "res2.png"))
@@ -142,7 +142,5 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

@@ -7,24 +7,44 @@
 //
 
 import Foundation
+import UIKit
 
-class PapaModel: NSObject, Printable {
-    let id: Int
-    let title: String
-    var content: String?
-    var imageURL: String?
+public class PapaModel: NSObject, Printable {
+    public let id: Int
+    public let title: String
+    public var content: String?
+    public var imageURL: String?
     
-    override var description: String {
+    override public var description: String {
         return title
     }
     
-    init(id: Int, title: String, imageURL: String?) {
+    public init(id: Int, title: String, imageURL: String?) {
         self.id = id
         self.title = title
         self.imageURL = imageURL
     }
     
-    func getText() {
-        // TODO: extract text from self.content
+    public func getText() -> String {
+        if let encodedData = self.content?.dataUsingEncoding(NSUTF16StringEncoding) {
+            let attributedOptions = [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType]
+            
+            let attributedString = NSAttributedString(
+                data: encodedData,
+                options: attributedOptions,
+                documentAttributes: nil,
+                error: nil
+            )
+            
+            if let str = attributedString?.string {
+                return str.substringToIndex(advance(str.startIndex, min(25, countElements(str))))
+            }
+            else {
+                return ""
+            }
+        }
+        else {
+            return ""
+        }
     }
 }
