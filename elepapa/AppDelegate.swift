@@ -25,7 +25,6 @@ func createPapaViewController(papaId: Int) -> DetailViewController? {
     // TODO: add navigator
     // expected behavior: should be able to nav to home page, i.e. nav controller
     if (papaId == -1) {
-        println("no valid papa id detected")
         return nil
     }
     
