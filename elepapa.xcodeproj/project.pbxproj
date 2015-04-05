@@ -11,6 +11,7 @@
 		5F4864E81ACC7A500074945E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4864E61ACC7A500074945E /* DataManager.swift */; };
 		5F4864E91ACC7A500074945E /* PapaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4864E71ACC7A500074945E /* PapaModel.swift */; };
 		5F4864ED1ACC7B740074945E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F4864EC1ACC7B740074945E /* Main.storyboard */; };
+		5F6711531AD1D07C00039369 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6711521AD1D07C00039369 /* logo.png */; };
 		5FEA5B7D1ACC72030004A862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B7C1ACC72030004A862 /* AppDelegate.swift */; };
 		5FEA5B7F1ACC72030004A862 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B7E1ACC72030004A862 /* MasterViewController.swift */; };
 		5FEA5B811ACC72030004A862 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B801ACC72030004A862 /* DetailViewController.swift */; };
@@ -36,6 +37,7 @@
 		5F4864E61ACC7A500074945E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5F4864E71ACC7A500074945E /* PapaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapaModel.swift; sourceTree = "<group>"; };
 		5F4864EC1ACC7B740074945E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5F6711521AD1D07C00039369 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Resources/logo.png; sourceTree = "<group>"; };
 		5FEA5B771ACC72030004A862 /* elepapa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elepapa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FEA5B7B1ACC72030004A862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FEA5B7C1ACC72030004A862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		5FEA5B7A1ACC72030004A862 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5F6711521AD1D07C00039369 /* logo.png */,
 				5FEA5B7B1ACC72030004A862 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F6711531AD1D07C00039369 /* logo.png in Resources */,
 				5F4864ED1ACC7B740074945E /* Main.storyboard in Resources */,
 				5FEA5B891ACC72030004A862 /* LaunchScreen.xib in Resources */,
 				5FEA5B861ACC72030004A862 /* Images.xcassets in Resources */,
