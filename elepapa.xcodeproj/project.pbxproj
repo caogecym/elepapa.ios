@@ -483,11 +483,7 @@
 				INFOPLIST_FILE = elepapa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/ycao/dev/WeChatAPI/WeChatAPI,
-					"$(PROJECT_DIR)/elepapa/libs/WeChat",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -501,11 +497,7 @@
 				INFOPLIST_FILE = elepapa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/ycao/dev/WeChatAPI/WeChatAPI,
-					"$(PROJECT_DIR)/elepapa/libs/WeChat",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
