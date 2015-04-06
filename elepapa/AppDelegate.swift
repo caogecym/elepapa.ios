@@ -1,14 +1,15 @@
 //
 //  AppDelegate.swift
-//  elepapa.ios
+//  elepapa
 //
 //  Created by Yuming Cao on 11/26/14.
 //  Copyright (c) 2014 papa. All rights reserved.
 //
 
 import UIKit
+import WeChat
 
-func getPapaIdFromUrl(url: NSURL) -> Int {
+public func getPapaIdFromUrl(url: NSURL) -> Int {
     if let urlStr = url.absoluteString? {
         let urlArr = split(urlStr) {$0 == "/"}
         let proto: String = urlArr[0]
@@ -21,8 +22,9 @@ func getPapaIdFromUrl(url: NSURL) -> Int {
 }
 
 func createPapaViewController(papaId: Int) -> DetailViewController? {
+    // TODO: add navigator
+    // expected behavior: should be able to nav to home page, i.e. nav controller
     if (papaId == -1) {
-        println("no valid papa id detected")
         return nil
     }
     
@@ -43,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        WXApi.registerApp("wx796dffa6c75b7146")
         return true
     }
     

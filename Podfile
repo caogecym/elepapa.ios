@@ -1,17 +1,15 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '8.0'
-workspace 'elepapa.ios'
+platform :ios, '8.2'
 
 use_frameworks!
 
-target 'elepapa.ios' do
-    pod 'AFNetworking', '~> 2.5'
-    pod 'Bolts', '~>1.1'
-    pod 'SwiftyJSON', '~> 2.1'
+pod 'SwiftyJSON', '~> 2.1'
+pod 'WeChat', '~> 1.0.1'
+
+target 'elepapa' do
 end
 
-target 'elepapa.iosTests' do
-    pod 'SwiftyJSON', '~> 2.1'
+target 'elepapaTests' do
 end
 

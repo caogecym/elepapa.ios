@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		550B4AA3517F16479AE27519 /* Pods_elepapa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E3CAB2698E29F08CF2900F /* Pods_elepapa.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5F4864E81ACC7A500074945E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4864E61ACC7A500074945E /* DataManager.swift */; };
+		5F4864E91ACC7A500074945E /* PapaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4864E71ACC7A500074945E /* PapaModel.swift */; };
+		5F4864ED1ACC7B740074945E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F4864EC1ACC7B740074945E /* Main.storyboard */; };
+		5F6711531AD1D07C00039369 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6711521AD1D07C00039369 /* logo.png */; };
+		5FEA5B7D1ACC72030004A862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B7C1ACC72030004A862 /* AppDelegate.swift */; };
+		5FEA5B7F1ACC72030004A862 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B7E1ACC72030004A862 /* MasterViewController.swift */; };
+		5FEA5B811ACC72030004A862 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B801ACC72030004A862 /* DetailViewController.swift */; };
+		5FEA5B861ACC72030004A862 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA5B851ACC72030004A862 /* Images.xcassets */; };
+		5FEA5B891ACC72030004A862 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA5B871ACC72030004A862 /* LaunchScreen.xib */; };
+		5FEA5B951ACC72030004A862 /* elepapaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B941ACC72030004A862 /* elepapaTests.swift */; };
+		65696F2864961EE421A219E0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6593F7FF18FFDBD62C9900B8 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6B20DE395B9C44AEAE253C41 /* Pods_elepapaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4673083F7189DFEC935DEA /* Pods_elepapaTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5FEA5B8F1ACC72030004A862 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FEA5B6F1ACC72030004A862 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FEA5B761ACC72030004A862;
+			remoteInfo = elepapa;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		458F0938F73F8F029E9117BF /* Pods-elepapaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elepapaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-elepapaTests/Pods-elepapaTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F4864E61ACC7A500074945E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		5F4864E71ACC7A500074945E /* PapaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapaModel.swift; sourceTree = "<group>"; };
+		5F4864EC1ACC7B740074945E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5F6711521AD1D07C00039369 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Resources/logo.png; sourceTree = "<group>"; };
+		5FEA5B771ACC72030004A862 /* elepapa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = elepapa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FEA5B7B1ACC72030004A862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FEA5B7C1ACC72030004A862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5FEA5B7E1ACC72030004A862 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		5FEA5B801ACC72030004A862 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5FEA5B851ACC72030004A862 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5FEA5B881ACC72030004A862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5FEA5B8E1ACC72030004A862 /* elepapaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = elepapaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FEA5B931ACC72030004A862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FEA5B941ACC72030004A862 /* elepapaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elepapaTests.swift; sourceTree = "<group>"; };
+		6593F7FF18FFDBD62C9900B8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C1AF08681D83EE17E8E3454 /* Pods-elepapaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elepapaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elepapaTests/Pods-elepapaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B70324782E00C06D3FC24655 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BBAC1DE67A96367EBEC651A5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F0E3CAB2698E29F08CF2900F /* Pods_elepapa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elepapa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD4673083F7189DFEC935DEA /* Pods_elepapaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elepapaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FEA5B741ACC72030004A862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65696F2864961EE421A219E0 /* Pods.framework in Frameworks */,
+				550B4AA3517F16479AE27519 /* Pods_elepapa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FEA5B8B1ACC72030004A862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B20DE395B9C44AEAE253C41 /* Pods_elepapaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FEA5B6E1ACC72030004A862 = {
+			isa = PBXGroup;
+			children = (
+				5FEA5B791ACC72030004A862 /* elepapa */,
+				5FEA5B911ACC72030004A862 /* elepapaTests */,
+				5FEA5B781ACC72030004A862 /* Products */,
+				BB77B7BD2E75762044A447F3 /* Pods */,
+				B6B4103CCF98A5FC252CBA79 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5FEA5B781ACC72030004A862 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FEA5B771ACC72030004A862 /* elepapa.app */,
+				5FEA5B8E1ACC72030004A862 /* elepapaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FEA5B791ACC72030004A862 /* elepapa */ = {
+			isa = PBXGroup;
+			children = (
+				5FEA5B7C1ACC72030004A862 /* AppDelegate.swift */,
+				5FEA5B7E1ACC72030004A862 /* MasterViewController.swift */,
+				5FEA5B801ACC72030004A862 /* DetailViewController.swift */,
+				5F4864E61ACC7A500074945E /* DataManager.swift */,
+				5F4864E71ACC7A500074945E /* PapaModel.swift */,
+				5F4864EC1ACC7B740074945E /* Main.storyboard */,
+				5FEA5B851ACC72030004A862 /* Images.xcassets */,
+				5FEA5B871ACC72030004A862 /* LaunchScreen.xib */,
+				5FEA5B7A1ACC72030004A862 /* Supporting Files */,
+			);
+			path = elepapa;
+			sourceTree = "<group>";
+		};
+		5FEA5B7A1ACC72030004A862 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F6711521AD1D07C00039369 /* logo.png */,
+				5FEA5B7B1ACC72030004A862 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FEA5B911ACC72030004A862 /* elepapaTests */ = {
+			isa = PBXGroup;
+			children = (
+				5FEA5B941ACC72030004A862 /* elepapaTests.swift */,
+				5FEA5B921ACC72030004A862 /* Supporting Files */,
+			);
+			path = elepapaTests;
+			sourceTree = "<group>";
+		};
+		5FEA5B921ACC72030004A862 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FEA5B931ACC72030004A862 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6B4103CCF98A5FC252CBA79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6593F7FF18FFDBD62C9900B8 /* Pods.framework */,
+				F0E3CAB2698E29F08CF2900F /* Pods_elepapa.framework */,
+				FD4673083F7189DFEC935DEA /* Pods_elepapaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB77B7BD2E75762044A447F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B70324782E00C06D3FC24655 /* Pods.debug.xcconfig */,
+				BBAC1DE67A96367EBEC651A5 /* Pods.release.xcconfig */,
+				7C1AF08681D83EE17E8E3454 /* Pods-elepapaTests.debug.xcconfig */,
+				458F0938F73F8F029E9117BF /* Pods-elepapaTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FEA5B761ACC72030004A862 /* elepapa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FEA5B981ACC72030004A862 /* Build configuration list for PBXNativeTarget "elepapa" */;
+			buildPhases = (
+				5AAFE3113446BAD2F035938A /* Check Pods Manifest.lock */,
+				5FEA5B731ACC72030004A862 /* Sources */,
+				5FEA5B741ACC72030004A862 /* Frameworks */,
+				5FEA5B751ACC72030004A862 /* Resources */,
+				0B3B6610A0FFD8AC2A083AB9 /* Embed Pods Frameworks */,
+				1157ED89FBC754658EED84E4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = elepapa;
+			productName = elepapa;
+			productReference = 5FEA5B771ACC72030004A862 /* elepapa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FEA5B8D1ACC72030004A862 /* elepapaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FEA5B9B1ACC72030004A862 /* Build configuration list for PBXNativeTarget "elepapaTests" */;
+			buildPhases = (
+				0590007A1C6FF3D7014D299B /* Check Pods Manifest.lock */,
+				5FEA5B8A1ACC72030004A862 /* Sources */,
+				5FEA5B8B1ACC72030004A862 /* Frameworks */,
+				5FEA5B8C1ACC72030004A862 /* Resources */,
+				01A5D40A1640300EF6C0FE5B /* Embed Pods Frameworks */,
+				96FFA6A3D66B30C98D02C5E5 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FEA5B901ACC72030004A862 /* PBXTargetDependency */,
+			);
+			name = elepapaTests;
+			productName = elepapaTests;
+			productReference = 5FEA5B8E1ACC72030004A862 /* elepapaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FEA5B6F1ACC72030004A862 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Yuming;
+				TargetAttributes = {
+					5FEA5B761ACC72030004A862 = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 5774H9RDCT;
+					};
+					5FEA5B8D1ACC72030004A862 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 5FEA5B761ACC72030004A862;
+					};
+				};
+			};
+			buildConfigurationList = 5FEA5B721ACC72030004A862 /* Build configuration list for PBXProject "elepapa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5FEA5B6E1ACC72030004A862;
+			productRefGroup = 5FEA5B781ACC72030004A862 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FEA5B761ACC72030004A862 /* elepapa */,
+				5FEA5B8D1ACC72030004A862 /* elepapaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FEA5B751ACC72030004A862 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6711531AD1D07C00039369 /* logo.png in Resources */,
+				5F4864ED1ACC7B740074945E /* Main.storyboard in Resources */,
+				5FEA5B891ACC72030004A862 /* LaunchScreen.xib in Resources */,
+				5FEA5B861ACC72030004A862 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FEA5B8C1ACC72030004A862 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01A5D40A1640300EF6C0FE5B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elepapaTests/Pods-elepapaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0590007A1C6FF3D7014D299B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0B3B6610A0FFD8AC2A083AB9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elepapa/Pods-elepapa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1157ED89FBC754658EED84E4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AAFE3113446BAD2F035938A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		96FFA6A3D66B30C98D02C5E5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-elepapaTests/Pods-elepapaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FEA5B731ACC72030004A862 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FEA5B811ACC72030004A862 /* DetailViewController.swift in Sources */,
+				5F4864E81ACC7A500074945E /* DataManager.swift in Sources */,
+				5FEA5B7F1ACC72030004A862 /* MasterViewController.swift in Sources */,
+				5FEA5B7D1ACC72030004A862 /* AppDelegate.swift in Sources */,
+				5F4864E91ACC7A500074945E /* PapaModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FEA5B8A1ACC72030004A862 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FEA5B951ACC72030004A862 /* elepapaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FEA5B901ACC72030004A862 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FEA5B761ACC72030004A862 /* elepapa */;
+			targetProxy = 5FEA5B8F1ACC72030004A862 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5FEA5B871ACC72030004A862 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FEA5B881ACC72030004A862 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FEA5B961ACC72030004A862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5FEA5B971ACC72030004A862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FEA5B991ACC72030004A862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B70324782E00C06D3FC24655 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = elepapa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5FEA5B9A1ACC72030004A862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBAC1DE67A96367EBEC651A5 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = elepapa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5FEA5B9C1ACC72030004A862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C1AF08681D83EE17E8E3454 /* Pods-elepapaTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = elepapaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/elepapa.app/elepapa";
+			};
+			name = Debug;
+		};
+		5FEA5B9D1ACC72030004A862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 458F0938F73F8F029E9117BF /* Pods-elepapaTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = elepapaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/elepapa.app/elepapa";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FEA5B721ACC72030004A862 /* Build configuration list for PBXProject "elepapa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FEA5B961ACC72030004A862 /* Debug */,
+				5FEA5B971ACC72030004A862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FEA5B981ACC72030004A862 /* Build configuration list for PBXNativeTarget "elepapa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FEA5B991ACC72030004A862 /* Debug */,
+				5FEA5B9A1ACC72030004A862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FEA5B9B1ACC72030004A862 /* Build configuration list for PBXNativeTarget "elepapaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FEA5B9C1ACC72030004A862 /* Debug */,
+				5FEA5B9D1ACC72030004A862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FEA5B6F1ACC72030004A862 /* Project object */;
+}

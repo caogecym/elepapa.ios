@@ -1,6 +1,6 @@
 //
 //  MasterViewController.swift
-//  elepapa.ios
+//  elepapa
 //
 //  Created by Yuming Cao on 11/26/14.
 //  Copyright (c) 2014 papa. All rights reserved.
@@ -86,7 +86,7 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
         let object = objects[indexPath.row]
-        cell.textLabel.text = object.description
+        cell.textLabel?.text = object.description
         return cell
     }
 }

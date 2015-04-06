@@ -1,6 +1,6 @@
 //
 //  DetailViewController.swift
-//  elepapa.ios
+//  elepapa
 //
 //  Created by Yuming Cao on 11/26/14.
 //  Copyright (c) 2014 papa. All rights reserved.
@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import WeChat
 
 class DetailViewController: UIViewController {
 
@@ -16,7 +17,6 @@ class DetailViewController: UIViewController {
 
     var detailItem: PapaModel? {
         didSet {
-            // Update the view.
             self.configureView()
         }
     }
@@ -96,7 +96,7 @@ class DetailViewController: UIViewController {
             title: "Share with WeChat friend",
             style: UIAlertActionStyle.Default,
             handler: { (action: UIAlertAction!) -> Void in
-                println("TODO: handler logic here")
+                self.sharePapaToFriend()
             }            
         )             
         
@@ -111,6 +111,27 @@ class DetailViewController: UIViewController {
         return alert
     }
     
+    func sharePapaToFriend() {
+        var message = WXMediaMessage()
+        
+        if let papa: PapaModel = self.detailItem {
+            message.title = papa.title
+            message.description = papa.getText()
+            message.setThumbImage(UIImage(named: "logo.png"))
+            
+            var webObj = WXWebpageObject()
+            webObj.webpageUrl = "www.elepapa.com/t/\(papa.id)"
+            message.mediaObject = webObj
+            
+            var req  = SendMessageToWXReq()
+            req.bText = false
+            req.message = message
+            
+            WXApi.sendReq(req)
+        }
+    }
+
+    
     func rightBtnSelected() {
         self.presentViewController(self.initAlertController(), animated: true, completion: nil)
     }
@@ -119,7 +140,5 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
