@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
     }
     
     func generateHtml(detail: PapaModel) -> String {
-        var cssStyle = "<link href=\"http://elepapa.com/uploads/stylesheet-cache/mobile_d53bbc3837adefabb16d696db452a9618a4805b6.css\" rel=\"stylesheet\">"
+        var cssStyle = "<link href=\"http://shanzhu365.com/uploads/stylesheet-cache/mobile_d53bbc3837adefabb16d696db452a9618a4805b6.css\" rel=\"stylesheet\">"
         var topicStyle = "<style>#wmd-preview img:not(.thumbnail), .cooked img:not(.thumbnail) {max-width: 100%; height: auto;}</style>"
         var metaView = "<meta name=\"viewport\" content=\"width=device-width; minimum-scale=1.0; maximum-scale=1.0; user-scalable=no\">"
         
@@ -120,7 +120,7 @@ class DetailViewController: UIViewController {
             message.setThumbImage(UIImage(named: "logo.png"))
             
             var webObj = WXWebpageObject()
-            webObj.webpageUrl = "www.elepapa.com/t/\(papa.id)"
+            webObj.webpageUrl = "www.shanzhu365.com/t/\(papa.id)"
             message.mediaObject = webObj
             
             var req  = SendMessageToWXReq()

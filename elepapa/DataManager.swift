@@ -9,7 +9,7 @@
 
 import Foundation
 
-let ElepapaURL = "http://elepapa.com/latest.json"
+let ElepapaURL = "http://shanzhu365.com/latest.json"
 
 class DataManager {
     
@@ -22,7 +22,7 @@ class DataManager {
   }
   
   class func getPapaDetailFromElepapaWithSuccess(papaId: Int, success: ((papaData: NSData!) -> Void)) {
-      let url  = "http://elepapa.com/t/\(papaId).json"
+      let url  = "http://shanzhu365.com/t/\(papaId).json"
       loadDataFromURL(NSURL(string: url)!, completion:{(data, error) -> Void in
           if let urlData = data {
               success(papaData: urlData)

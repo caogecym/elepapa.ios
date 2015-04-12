@@ -68,6 +68,7 @@ class MasterViewController: UITableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                 let object = self.objects[indexPath.row]
             (segue.destinationViewController as DetailViewController).detailItem = object
+            (segue.destinationViewController as DetailViewController).title = object.title
             }
         }
     }
