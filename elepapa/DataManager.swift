@@ -9,12 +9,11 @@
 
 import Foundation
 
-let ElepapaURL = "http://shanzhu365.com/latest.json"
 
 class DataManager {
     
-  class func getLatestPapaDataFromElepapaWithSuccess(success: ((papaData: NSData!) -> Void)) {
-      loadDataFromURL(NSURL(string: ElepapaURL)!, completion:{(data, error) -> Void in
+    class func getLatestPapaDataFromElepapaWithSuccess(papaUrl: String, success: ((papaData: NSData!) -> Void)) {
+      loadDataFromURL(NSURL(string: papaUrl)!, completion:{(data, error) -> Void in
           if let urlData = data {
               success(papaData: urlData)
           }

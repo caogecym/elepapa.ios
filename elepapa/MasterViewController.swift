@@ -8,10 +8,15 @@
 
 import UIKit
 import SwiftyJSON
+import SVPullToRefresh
 
 class MasterViewController: UITableViewController {
 
     var objects = [PapaModel]()
+    var baseUrl = "http://shanzhu365.com"
+    var papaUrl = "http://shanzhu365.com/latest.json"
+    var nextUrl = ""
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,13 +24,49 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.addPullToRefreshWithActionHandler({() -> Void in
+            self.objects.removeAll()
+            self.getPapaObjects(self.papaUrl, {() -> Void in
+                self.tableView.reloadData()
+                self.tableView.pullToRefreshView.stopAnimating()
+            })
+        })
+        
+        self.tableView.addInfiniteScrollingWithActionHandler({() -> Void in
+            if !self.hasNextPage() {
+                self.tableView.infiniteScrollingView.stopAnimating()
+                return
+            }
+            
+            let insertPosition = self.objects.count
+            self.getPapaObjects(self.nextUrl, {() -> Void in
+                self.insertNextPage(insertPosition)
+                self.tableView.infiniteScrollingView.stopAnimating()
+            })
+        })
+    }
+    
+    func hasNextPage() -> Bool {
+        if self.nextUrl.rangeOfString("latest") != nil {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
+    func insertNextPage(insertPosition: Int) -> Void {
+        var index_paths = [NSIndexPath]()
+        for i in insertPosition...self.objects.count - 1 {
+            index_paths.append(NSIndexPath(forRow: i, inSection: 0))
+        }
+        self.tableView.insertRowsAtIndexPaths(index_paths, withRowAnimation: .Automatic)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
         if objects.count == 0 {
-            getPapaObjects()
+            self.getPapaObjects(self.papaUrl, self.loadLatestPapas)
         }
     }
 
@@ -34,10 +75,11 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getPapaObjects() -> Void {
-        DataManager.getLatestPapaDataFromElepapaWithSuccess { (data) -> Void in
+    func getPapaObjects(url: String, success: () -> Void) -> Void {
+        DataManager.getLatestPapaDataFromElepapaWithSuccess (url, { (data) -> Void in
             let json = JSON(data: data)
             
+            self.nextUrl = self.baseUrl + json["topic_list"]["more_topics_url"].stringValue
             let papaArray = json["topic_list"]["topics"].arrayValue
             for papaDict in papaArray {
                 var papaId: Int? = papaDict["id"].intValue
@@ -48,19 +90,19 @@ class MasterViewController: UITableViewController {
             }
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.insertLatestPapas()
+                success()
             })
-        }
+        })
     }
     
-    func insertLatestPapas() {
+    func loadLatestPapas() {
         var index_paths = [NSIndexPath]()
         for i in 0...objects.count - 1 {
             index_paths.append(NSIndexPath(forRow: i, inSection: 0))
         }
         self.tableView.insertRowsAtIndexPaths(index_paths, withRowAnimation: .Automatic)
     }
-
+    
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -86,8 +128,10 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
-        let object = objects[indexPath.row]
-        cell.textLabel?.text = object.description
+        if !objects.isEmpty {
+            let object = objects[indexPath.row]
+            cell.textLabel?.text = object.description
+        }
         return cell
     }
 }

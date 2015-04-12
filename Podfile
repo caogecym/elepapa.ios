@@ -6,6 +6,7 @@ use_frameworks!
 
 pod 'SwiftyJSON', '~> 2.1'
 pod 'WeChat', '~> 1.0.1'
+pod 'SVPullToRefresh', '~> 0.4.1'
 
 target 'elepapa' do
 end

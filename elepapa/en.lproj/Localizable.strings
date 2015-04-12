@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  elepapa
+
+  Created by Yuming on 4/12/15.
+  Copyright (c) 2015 Yuming. All rights reserved.
+*/
+
+"Pull to refresh..." = "Pull to refresh...";
+"Release to refresh..." = "Release to refresh...";
+"Loading..." = "Loading...";
