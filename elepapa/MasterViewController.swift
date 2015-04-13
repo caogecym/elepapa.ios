@@ -13,6 +13,7 @@ import SVPullToRefresh
 class MasterViewController: UITableViewController {
 
     var objects = [PapaModel]()
+    var objMap = [Int: PapaModel]()
     var baseUrl = "http://shanzhu365.com"
     var papaUrl = "http://shanzhu365.com/latest.json"
     var nextUrl = ""
@@ -25,6 +26,7 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.addPullToRefreshWithActionHandler({() -> Void in
+            // Pull refresh is pretty expensive
             self.objects.removeAll()
             self.getPapaObjects(self.papaUrl, {() -> Void in
                 self.tableView.reloadData()
@@ -85,8 +87,16 @@ class MasterViewController: UITableViewController {
                 var papaId: Int? = papaDict["id"].intValue
                 var papaTitle: String? = papaDict["title"].stringValue
                 var papaImgUrl: String? = papaDict["image_url"].stringValue
-                var papa = PapaModel(id: papaId!, title: papaTitle!, imageURL: papaImgUrl)
-                self.objects.append(papa)
+                if let id: Int = papaId {
+                    if let papa = self.objMap[id] {
+                        self.objects.append(papa)
+                    }
+                    else {
+                        var papa = PapaModel(id: id, title: papaTitle!, imageURL: papaImgUrl)
+                        self.objMap[id] = papa
+                        self.objects.append(papa)
+                    }
+                }
             }
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -109,6 +119,9 @@ class MasterViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                 let object = self.objects[indexPath.row]
+                
+            self.tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.textColor = UIColor.grayColor()
+
             (segue.destinationViewController as DetailViewController).detailItem = object
             (segue.destinationViewController as DetailViewController).title = object.title
             }
@@ -130,6 +143,12 @@ class MasterViewController: UITableViewController {
 
         if !objects.isEmpty {
             let object = objects[indexPath.row]
+            if object.visited {
+                cell.textLabel?.textColor = UIColor.grayColor()
+            }
+            else {
+                cell.textLabel?.textColor = UIColor.blackColor()
+            }
             cell.textLabel?.text = object.description
         }
         return cell

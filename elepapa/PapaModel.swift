@@ -14,6 +14,7 @@ public class PapaModel: NSObject, Printable {
     public let title: String
     public var content: String?
     public var imageURL: String?
+    public var visited: Bool
     
     override public var description: String {
         return title
@@ -23,6 +24,7 @@ public class PapaModel: NSObject, Printable {
         self.id = id
         self.title = title
         self.imageURL = imageURL
+        self.visited = false
     }
     
     public func getText() -> String {

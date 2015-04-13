@@ -69,6 +69,7 @@ class DetailViewController: UIViewController {
         //self.setupGestureRecognizer()
 
         if let detail: PapaModel = self.detailItem {
+            detail.visited = true
             getPapaDetail(detail.id)
         }
     }
