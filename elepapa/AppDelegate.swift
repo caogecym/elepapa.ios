@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        WXApi.registerApp("wx796dffa6c75b7146")
+        WXApi.registerApp("wx09472e0350872dd0")
         return true
     }
     
