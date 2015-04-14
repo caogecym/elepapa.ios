@@ -25,6 +25,8 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.translucent = false
+        
         self.tableView.addPullToRefreshWithActionHandler({() -> Void in
             // Pull refresh is pretty expensive
             self.objects.removeAll()
