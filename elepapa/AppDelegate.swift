@@ -29,10 +29,8 @@ func createPapaViewController(papaId: Int) -> DetailViewController? {
     }
     
     let papa = PapaModel(id: papaId, title: "", imageURL: nil)
-    var pvc = DetailViewController()
+    var pvc = DetailViewController(coder: NSCoder())
     pvc.detailItem = papa
-    pvc.papaDetailView = UIWebView(frame: UIScreen.mainScreen().bounds)
-    pvc.view.addSubview(pvc.papaDetailView)
     return pvc
 }
 

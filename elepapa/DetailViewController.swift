@@ -7,18 +7,19 @@
 //
 
 import UIKit
+import WebKit
 import SwiftyJSON
 import WeChat
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, WKNavigationDelegate {
 
-    @IBOutlet var papaDetailView: UIWebView!
-
-
-    var detailItem: PapaModel? {
-        didSet {
-            self.configureView()
-        }
+    var webView: WKWebView
+    var detailItem: PapaModel?
+    
+    required init(coder aDecoder: NSCoder) {
+        self.webView = WKWebView(frame: CGRectZero)
+        super.init(coder: aDecoder)
+        self.webView.navigationDelegate = self
     }
 
     func getPapaDetail(papaId: Int) -> Void {
@@ -38,8 +39,7 @@ class DetailViewController: UIViewController {
     func generateHtml(detail: PapaModel) -> String {
         var cssStyle = "<link href=\"http://shanzhu365.com/uploads/stylesheet-cache/mobile_d53bbc3837adefabb16d696db452a9618a4805b6.css\" rel=\"stylesheet\">"
         var topicStyle = "<style>#wmd-preview img:not(.thumbnail), .cooked img:not(.thumbnail) {max-width: 100%; height: auto;}</style>"
-        var metaView = "<meta name=\"viewport\" content=\"width=device-width; minimum-scale=1.0; maximum-scale=1.0; user-scalable=no\">"
-        
+        var metaView = "<meta name=\"viewport\" content=\"initial-scale=1.0\"/>"
         var htmlHeader = "<head>" + cssStyle + topicStyle + metaView + "</head>"
         var htmlBody = "<div class=\"cooked\">" + detail.content! + "</div>"
         return htmlHeader + htmlBody
@@ -48,18 +48,31 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let detail: PapaModel = self.detailItem {
-            if let content = self.papaDetailView {
-                content.loadHTMLString(self.generateHtml(detail), baseURL: NSURL(string:"https://"))
-            }
+            self.webView.loadHTMLString(self.generateHtml(detail), baseURL: NSURL(string:"https://"))
         }
+    }
+    
+    //func webView(webView: WKWebView,
+    //             shouldStartLoadWithRequest request: NSURLRequest,
+    //             navigationType: UIWebViewNavigationType) -> Bool {
+    //    println("im here")
+    //    return true
+    //}
+    func addLayoutConstraints() {
+        webView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        let top = NSLayoutConstraint(item: webView, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 10)
+        let bottom = NSLayoutConstraint(item: webView, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1, constant: 0)
+        let left = NSLayoutConstraint(item: webView, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1, constant: 5)
+        let right = NSLayoutConstraint(item: webView, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1, constant: -5)
+        view.addConstraints([top, bottom, left, right])
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        view.addSubview(webView)
         
-        // get rid of 64px UIWebView top padding
-        self.automaticallyAdjustsScrollViewInsets = false
-        
+        self.addLayoutConstraints()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: UIBarButtonSystemItem.Action,
             target:self,
