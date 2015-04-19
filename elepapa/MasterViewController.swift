@@ -125,7 +125,6 @@ class MasterViewController: UITableViewController {
             self.tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.textColor = UIColor.grayColor()
 
             (segue.destinationViewController as DetailViewController).detailItem = object
-            (segue.destinationViewController as DetailViewController).title = object.title
             }
         }
     }

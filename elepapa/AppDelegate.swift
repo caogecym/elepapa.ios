@@ -29,7 +29,7 @@ func createPapaViewController(papaId: Int) -> DetailViewController? {
     }
     
     let papa = PapaModel(id: papaId, title: "", imageURL: nil)
-    var pvc = DetailViewController(coder: NSCoder())
+    var pvc = DetailViewController()
     pvc.detailItem = papa
     return pvc
 }

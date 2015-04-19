@@ -9,12 +9,27 @@
 import Foundation
 import UIKit
 
+
+public class Post: NSObject {
+    public var author_name: String
+    public var author_avatar_url: String
+    public var content: String
+    
+    public init(author_name: String, author_avatar_url: String, content: String) {
+        self.author_name = author_name
+        self.author_avatar_url = author_avatar_url
+        self.content = content
+    }
+}
+
+
 public class PapaModel: NSObject, Printable {
     public let id: Int
     public let title: String
-    public var content: String?
+    public var author_name: String?
     public var imageURL: String?
     public var visited: Bool
+    public var posts: [Post]
     
     override public var description: String {
         return title
@@ -25,10 +40,11 @@ public class PapaModel: NSObject, Printable {
         self.title = title
         self.imageURL = imageURL
         self.visited = false
+        self.posts = []
     }
     
     public func getText() -> String {
-        if let encodedData = self.content?.dataUsingEncoding(NSUTF16StringEncoding) {
+        if let encodedData = self.posts[0].content.dataUsingEncoding(NSUTF16StringEncoding) {
             let attributedOptions = [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType]
             
             let attributedString = NSAttributedString(

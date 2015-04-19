@@ -13,43 +13,77 @@ import WeChat
 
 class DetailViewController: UIViewController, WKNavigationDelegate {
 
-    var webView: WKWebView
+    var webView = WKWebView()
     var detailItem: PapaModel?
     
-    required init(coder aDecoder: NSCoder) {
-        self.webView = WKWebView(frame: CGRectZero)
-        super.init(coder: aDecoder)
-        self.webView.navigationDelegate = self
+    func loadPapaData(papa: PapaModel, papaArray: [JSON]) {
+        for post in papaArray {
+            let author_name = post["username"].stringValue
+            let content = post["cooked"].stringValue
+            let author_avator_url = "http://shanzhu365.com/letter_avatar/caogecym/45/2.png"//post[""].stringValue
+            papa.posts.append(Post(author_name: author_name, author_avatar_url: author_avator_url, content: content))
+        }
     }
-
-    func getPapaDetail(papaId: Int) -> Void {
+    
+    func getPapaDetail(papaId: Int) {
         DataManager.getPapaDetailFromElepapaWithSuccess(papaId, success: { (data) -> Void in
             let json = JSON(data: data)
-            
             let papaArray = json["post_stream"]["posts"].arrayValue
-            if let detail: PapaModel = self.detailItem {
-                detail.content = papaArray[0]["cooked"].stringValue
+            if let papa: PapaModel = self.detailItem {
+                self.loadPapaData(papa, papaArray: papaArray)
             }
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.configureView()
+                self.configureWebView()
             })
         })
     }
     
-    func generateHtml(detail: PapaModel) -> String {
-        var cssStyle = "<link href=\"http://shanzhu365.com/uploads/stylesheet-cache/mobile_d53bbc3837adefabb16d696db452a9618a4805b6.css\" rel=\"stylesheet\">"
+    func getHeader() -> String {
+        var cssStyle = "<link href=\"http://www.shanzhu365.com/uploads/stylesheet-cache/mobile_7451cd83369ad97b0cb973b0fb273ce2bf497534.css?__ws=elepapa.com\" media=\"all\" rel=\"stylesheet\">"
         var topicStyle = "<style>#wmd-preview img:not(.thumbnail), .cooked img:not(.thumbnail) {max-width: 100%; height: auto;}</style>"
         var metaView = "<meta name=\"viewport\" content=\"initial-scale=1.0\"/>"
-        var htmlHeader = "<head>" + cssStyle + topicStyle + metaView + "</head>"
-        var htmlBody = "<div class=\"cooked\">" + detail.content! + "</div>"
-        return htmlHeader + htmlBody
-    }   
+        return "<head>" + cssStyle + topicStyle + metaView + "</head>"
+    }
     
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail: PapaModel = self.detailItem {
-            self.webView.loadHTMLString(self.generateHtml(detail), baseURL: NSURL(string:"https://"))
+    func generateHtml() -> String {
+        var res = "<html>" + getHeader() + getBody() + "</html>"
+        return res
+        
+    }
+    
+    func getBody() -> String {
+        if let papa: PapaModel = self.detailItem {
+            return "<body>" + getTitle(papa) + getPosts(papa) + "</body>"
+        } else {
+            return ""
         }
+    }
+    
+    func getTitle(papa: PapaModel) -> String {
+        return "<h3 style=\"padding-top: 10px;\">\(papa.title)</h3>"
+    }
+    
+    func getPosts(papa: PapaModel) -> String {
+        var htmlMarkdown = ""
+        for post in papa.posts {
+            htmlMarkdown += getAvator(post) + getTopicBody(post)
+        }                                   
+        return htmlMarkdown
+    }
+    
+    func getAvator(post: Post) -> String {
+        return "<div style=\"float: left;\"><img width=\"45\" height=\"45\" src=\"" +  post.author_avatar_url + "\" class=\"avatar\"></div>" +
+               "<div style=\"float: left; margin-left: 5px;\"><b>" + post.author_name + "</b></div>"
+    }
+    
+    func getTopicBody(post: Post) -> String {
+        return "<div style=\"clear: left; padding-top: 5px; padding-right: 5px;\"><div class=\"cooked\">" + post.content + "</div></div>"
+    }
+    
+    func configureWebView() {
+        view.addSubview(webView)
+        self.addWebViewConstraints(webView, parent: view)
+        webView.loadHTMLString(self.generateHtml(), baseURL: NSURL(string:"https://"))
     }
     
     //func webView(webView: WKWebView,
@@ -58,21 +92,19 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
     //    println("im here")
     //    return true
     //}
-    func addLayoutConstraints() {
+    
+    func addWebViewConstraints(webView: WKWebView, parent: UIView) {
         webView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        let top = NSLayoutConstraint(item: webView, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 10)
-        let bottom = NSLayoutConstraint(item: webView, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1, constant: 0)
-        let left = NSLayoutConstraint(item: webView, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1, constant: 5)
-        let right = NSLayoutConstraint(item: webView, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1, constant: -5)
-        view.addConstraints([top, bottom, left, right])
+        let top = NSLayoutConstraint(item: webView, attribute: .Top, relatedBy: .Equal, toItem: parent, attribute: .Top, multiplier: 1, constant: 0)
+        let bottom = NSLayoutConstraint(item: webView, attribute: .Bottom, relatedBy: .Equal, toItem: parent, attribute: .Bottom, multiplier: 1, constant: 0)
+        let left = NSLayoutConstraint(item: webView, attribute: .Left, relatedBy: .Equal, toItem: parent, attribute: .Left, multiplier: 1, constant: 5)
+        let right = NSLayoutConstraint(item: webView, attribute: .Right, relatedBy: .Equal, toItem: parent, attribute: .Right, multiplier: 1, constant: -5)
+        parent.addConstraints([top, bottom, left, right])
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        view.addSubview(webView)
-        
-        self.addLayoutConstraints()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: UIBarButtonSystemItem.Action,
             target:self,
@@ -81,9 +113,9 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
         
         //self.setupGestureRecognizer()
 
-        if let detail: PapaModel = self.detailItem {
-            detail.visited = true
-            getPapaDetail(detail.id)
+        if let papa: PapaModel = self.detailItem {
+            papa.visited = true
+            getPapaDetail(papa.id)
         }
     }
     
@@ -99,7 +131,7 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
     }
 
     
-    func initAlertController() -> UIAlertController {
+    func initActionSheet() -> UIAlertController {
         var alert = UIAlertController(
             title: nil,
             message: nil,
@@ -147,7 +179,7 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
 
     
     func rightBtnSelected() {
-        self.presentViewController(self.initAlertController(), animated: true, completion: nil)
+        self.presentViewController(self.initActionSheet(), animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
