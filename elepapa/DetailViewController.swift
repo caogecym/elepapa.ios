@@ -116,6 +116,7 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
                 loadWebView()
             } else {
                 downloadPapaDetail(papa.id)
+                papa.visited = true
             }
         }
     }
