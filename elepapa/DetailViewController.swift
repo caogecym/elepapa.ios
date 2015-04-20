@@ -20,12 +20,12 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
         for post in papaArray {
             let author_name = post["username"].stringValue
             let content = post["cooked"].stringValue
-            let author_avator_url = "http://shanzhu365.com/letter_avatar/caogecym/45/2.png"//post[""].stringValue
+            let author_avator_url = "http://shanzhu365.com/letter_avatar/caogecym/45/2.png"// TODO: fix this post[""].stringValue
             papa.posts.append(Post(author_name: author_name, author_avatar_url: author_avator_url, content: content))
         }
     }
     
-    func getPapaDetail(papaId: Int) {
+    func downloadPapaDetail(papaId: Int) {
         DataManager.getPapaDetailFromElepapaWithSuccess(papaId, success: { (data) -> Void in
             let json = JSON(data: data)
             let papaArray = json["post_stream"]["posts"].arrayValue
@@ -33,7 +33,7 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
                 self.loadPapaData(papa, papaArray: papaArray)
             }
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.configureWebView()
+                self.loadWebView()
             })
         })
     }
@@ -46,9 +46,7 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
     }
     
     func generateHtml() -> String {
-        var res = "<html>" + getHeader() + getBody() + "</html>"
-        return res
-        
+        return "<html>" + getHeader() + getBody() + "</html>"
     }
     
     func getBody() -> String {
@@ -80,7 +78,7 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
         return "<div style=\"clear: left; padding-top: 5px; padding-right: 5px;\"><div class=\"cooked\">" + post.content + "</div></div>"
     }
     
-    func configureWebView() {
+    func loadWebView() {
         view.addSubview(webView)
         self.addWebViewConstraints(webView, parent: view)
         webView.loadHTMLString(self.generateHtml(), baseURL: NSURL(string:"https://"))
@@ -114,8 +112,11 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
         //self.setupGestureRecognizer()
 
         if let papa: PapaModel = self.detailItem {
-            papa.visited = true
-            getPapaDetail(papa.id)
+            if (papa.visited) {
+                loadWebView()
+            } else {
+                downloadPapaDetail(papa.id)
+            }
         }
     }
     
