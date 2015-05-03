@@ -20,7 +20,7 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
         for post in papaArray {
             let author_name = post["username"].stringValue
             let content = post["cooked"].stringValue
-            let author_avator_url = "http://shanzhu365.com/letter_avatar/caogecym/45/2.png"// TODO: fix this post[""].stringValue
+            let author_avator_url = post["avatar_template"].stringValue.stringByReplacingOccurrencesOfString("{size}", withString: "45")
             papa.posts.append(Post(author_name: author_name, author_avatar_url: author_avator_url, content: content))
         }
     }
@@ -42,7 +42,8 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
         var cssStyle = "<link href=\"http://www.shanzhu365.com/uploads/stylesheet-cache/mobile_7451cd83369ad97b0cb973b0fb273ce2bf497534.css?__ws=elepapa.com\" media=\"all\" rel=\"stylesheet\">"
         var topicStyle = "<style>#wmd-preview img:not(.thumbnail), .cooked img:not(.thumbnail) {max-width: 100%; height: auto;}</style>"
         var metaView = "<meta name=\"viewport\" content=\"initial-scale=1.0\"/>"
-        return "<head>" + cssStyle + topicStyle + metaView + "</head>"
+        var base = "<base href=\"http://www.shanzhu365.com\">"
+        return "<head>" + cssStyle + topicStyle + metaView + base + "</head>"
     }
     
     func generateHtml() -> String {
@@ -63,8 +64,12 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
     
     func getPosts(papa: PapaModel) -> String {
         var htmlMarkdown = ""
-        for post in papa.posts {
+        for (idx, post) in enumerate(papa.posts) {
             htmlMarkdown += getAvator(post) + getTopicBody(post)
+            if (idx != papa.posts.count - 1) {
+                htmlMarkdown += "<hr>"
+            }
+            
         }                                   
         return htmlMarkdown
     }

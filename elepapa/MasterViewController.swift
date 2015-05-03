@@ -79,11 +79,24 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func getNextUrl(moreTopicsUrl: String) -> String {
+        if (moreTopicsUrl == "") {
+            return ""
+        }
+        
+        let moreUrlArr = split(moreTopicsUrl) {$0 == "?"}
+        let head = moreUrlArr[0]
+        let tail = moreUrlArr.count > 1 ? moreUrlArr[1] : ""
+        let moreUrlJson = moreUrlArr.count > 1 ? head + ".json?" + tail : head
+        return self.baseUrl + moreUrlJson
+    }
+    
     func getPapaObjects(url: String, success: () -> Void) -> Void {
         DataManager.getLatestPapaDataFromElepapaWithSuccess (url, { (data) -> Void in
             let json = JSON(data: data)
             
-            self.nextUrl = self.baseUrl + json["topic_list"]["more_topics_url"].stringValue
+            self.nextUrl = self.getNextUrl(json["topic_list"]["more_topics_url"].stringValue)
+            
             let papaArray = json["topic_list"]["topics"].arrayValue
             for papaDict in papaArray {
                 var papaId: Int? = papaDict["id"].intValue
