@@ -13,6 +13,7 @@
 		5F4864ED1ACC7B740074945E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F4864EC1ACC7B740074945E /* Main.storyboard */; };
 		5F61E94E1ADB2E9B00EF8F4F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F61E9501ADB2E9B00EF8F4F /* Localizable.strings */; };
 		5F6711531AD1D07C00039369 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6711521AD1D07C00039369 /* logo.png */; };
+		5F9E82721AF5DD8000DA397E /* elepapaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B941ACC72030004A862 /* elepapaTests.swift */; };
 		5FB2A6461ADCBCC000550548 /* 2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FB2A6441ADCBCC000550548 /* 2x.png */; };
 		5FB2A6471ADCBCC000550548 /* 3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FB2A6451ADCBCC000550548 /* 3x.png */; };
 		5FEA5B7D1ACC72030004A862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B7C1ACC72030004A862 /* AppDelegate.swift */; };
@@ -20,7 +21,6 @@
 		5FEA5B811ACC72030004A862 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B801ACC72030004A862 /* DetailViewController.swift */; };
 		5FEA5B861ACC72030004A862 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA5B851ACC72030004A862 /* Images.xcassets */; };
 		5FEA5B891ACC72030004A862 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FEA5B871ACC72030004A862 /* LaunchScreen.xib */; };
-		5FEA5B951ACC72030004A862 /* elepapaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA5B941ACC72030004A862 /* elepapaTests.swift */; };
 		65696F2864961EE421A219E0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6593F7FF18FFDBD62C9900B8 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6B20DE395B9C44AEAE253C41 /* Pods_elepapaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4673083F7189DFEC935DEA /* Pods_elepapaTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -388,7 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FEA5B951ACC72030004A862 /* elepapaTests.swift in Sources */,
+				5F9E82721AF5DD8000DA397E /* elepapaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
